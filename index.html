@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Assignment | NPS API</title>
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search national parks</h1>
+        <form id="js-form">
+            <div class="state-names">
+                <label for="user">Enter state's abbreviation:</label>
+                <input type="text" name="user" id="js-name" placeholder="e.g. ny,mi,tx">
+                <p>&#40;pro tip: enter multiple states separated by a comma "<span class="comma">,</span>" and no spaces&#41;</p>
+            </div>
+            <div class="num-of-results">
+                <label for="max-results">Maximum results to return:</label>
+                <input type="number" name="max-results" id="js-max-results" value="10">
+                <input type="submit" value="Search Parks!">
+            </div>
+        </form>
+
+        <p id="js-error-message" class="error-message"></p>
+        
+        <div class="js-num-parks hidden"></div>
+
+        <section id="hidden" class="results hidden">
+            <ul id="results-list">
+            </ul>
+        </section>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
